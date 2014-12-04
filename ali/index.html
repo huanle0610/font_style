@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="css/common.css" type="text/css"/>
+    <link rel="stylesheet" href="css/my.css" type="text/css"/>
+</head>
+<body>
+<span class="text-size-32 icon-warning-2 text-warning"></span>
+<span class="console-topbar-btn-notice-icon icon-bell"></span>
+
+<div class="console-topbar-new console-topbar-new-zh-cn" aliyun-console-topbar-new="" product-id="ess" data-spm="100">
+    <div class="console-topbar-logo pull-left"><a href="http://www.aliyun.com"
+                                                  class="console-topbar-btn console-topbar-logo-icon" target="_blank"
+                                                  aliyun-console-spm="" spm-id="1"
+                                                  data-spm-click="gostr=/aliyun;locaid=d1;"><img
+            ng-show="logoLink.imgLink" ng-src="//www.aliyun.com/favicon.ico" class=""
+            src="//www.aliyun.com/favicon.ico"></a><a href="http://home.console.aliyun.com"
+                                                      class="console-topbar-btn console-topbar-btn-inverse console-topbar-btn-home"
+                                                      target="_self" aliyun-console-spm="" spm-id="2"
+                                                      data-spm-click="gostr=/aliyun;locaid=d2;"><span
+            class="console-topbar-btn-icon icon-home"></span> <span class="console-topbar-btn-text nowrap"><span
+            class="ng-binding">控制台首页</span></span></a></div>
+    <div class="console-topbar-nav pull-left dropdown"><a href="#"
+                                                          class="dropdown-toggle console-topbar-btn console-topbar-btn-inverse-white console-topbar-btn-nav"
+                                                          data-toggle="dropdown" aliyun-console-spm="" spm-id="3"
+                                                          data-spm-click="gostr=/aliyun;locaid=d3;"><span
+            class="console-topbar-btn-icon icon-menu"></span> <span class="console-topbar-btn-text"><span
+            class="ng-binding">产品与服务</span> <span class="caret"></span></span></a>
+
+        <div class="dropdown-menu console-topbar-nav-list clearfix" ng-style="productsListWidth" style="width: 592px;">
+            <!-- ngRepeat: col in productsInfo -->
+            <div data-ng-repeat="col in productsInfo" class="console-topbar-nav-col ng-scope">
+                <!-- ngRepeat: category in col -->
+                <div ng-repeat="category in col" class="console-topbar-nav-item ng-scope"><p
+                        class="console-topbar-nav-item-title ng-binding">弹性计算</p>
+                    <ul><!-- ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope"><a ng-href="http://console.aliyun.com/ecs/index.htm" target="_self"
+                                                aliyun-console-spm="" spm-id="10ecs"
+                                                data-spm-click="gostr=/aliyun;locaid=d10ecs;"
+                                                href="http://console.aliyun.com/ecs/index.htm"><span
+                                class="console-topbar-nav-item-icon icon-ecs"></span> <span
+                                class="ng-binding">云服务器</span> <span class="console-topbar-nav-item-short ng-binding">ECS</span></a>
+                        </li>
+                        <!-- end ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope console-topbar-unservice"><a ng-href="http://slb.console.aliyun.com"
+                                                                         target="_self" aliyun-console-spm=""
+                                                                         spm-id="10slb"
+                                                                         data-spm-click="gostr=/aliyun;locaid=d10slb;"
+                                                                         href="http://slb.console.aliyun.com"><span
+                                class="console-topbar-nav-item-icon icon-slb"></span> <span
+                                class="ng-binding">负载均衡</span> <span class="console-topbar-nav-item-short ng-binding">SLB</span></a>
+                        </li>
+                        <!-- end ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope"><a ng-href="http://ess.console.aliyun.com" target="_self"
+                                                aliyun-console-spm="" spm-id="10ess"
+                                                data-spm-click="gostr=/aliyun;locaid=d10ess;"
+                                                href="http://ess.console.aliyun.com"><span
+                                class="console-topbar-nav-item-icon icon-ess"></span> <span
+                                class="ng-binding">弹性伸缩服务</span> <span class="console-topbar-nav-item-short ng-binding">ESS</span></a>
+                        </li>
+                        <!-- end ngRepeat: product in category.products --></ul>
+                    <!-- ngIf: $index == 0 -->
+                    <div class="console-topbar-nav-gap ng-scope" ng-if="$index == 0"></div>
+                    <!-- end ngIf: $index == 0 --></div>
+                <!-- end ngRepeat: category in col -->
+                <div ng-repeat="category in col" class="console-topbar-nav-item ng-scope"><p
+                        class="console-topbar-nav-item-title ng-binding">数据库</p>
+                    <ul><!-- ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope console-topbar-unservice"><a ng-href="http://rds.console.aliyun.com"
+                                                                         target="_self" aliyun-console-spm=""
+                                                                         spm-id="10rds"
+                                                                         data-spm-click="gostr=/aliyun;locaid=d10rds;"
+                                                                         href="http://rds.console.aliyun.com"><span
+                                class="console-topbar-nav-item-icon icon-rds"></span> <span
+                                class="ng-binding">关系型数据库</span> <span class="console-topbar-nav-item-short ng-binding">RDS</span></a>
+                        </li>
+                        <!-- end ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope console-topbar-unservice"><a ng-href="http://ots.console.aliyun.com/"
+                                                                         target="_self" aliyun-console-spm=""
+                                                                         spm-id="10ots"
+                                                                         data-spm-click="gostr=/aliyun;locaid=d10ots;"
+                                                                         href="http://ots.console.aliyun.com/"><span
+                                class="console-topbar-nav-item-icon icon-ots"></span> <span
+                                class="ng-binding">开放结构化数据服务</span> <span
+                                class="console-topbar-nav-item-short ng-binding">OTS</span></a></li>
+                        <!-- end ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope console-topbar-unservice"><a ng-href="http://ocs.console.aliyun.com/"
+                                                                         target="_self" aliyun-console-spm=""
+                                                                         spm-id="10ocs"
+                                                                         data-spm-click="gostr=/aliyun;locaid=d10ocs;"
+                                                                         href="http://ocs.console.aliyun.com/"><span
+                                class="console-topbar-nav-item-icon icon-ocs"></span> <span
+                                class="ng-binding">开放缓存服务</span> <span class="console-topbar-nav-item-short ng-binding">OCS</span></a>
+                        </li>
+                        <!-- end ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope console-topbar-unservice"><a ng-href="http://drds.console.aliyun.com"
+                                                                         target="_self" aliyun-console-spm=""
+                                                                         spm-id="10drds"
+                                                                         data-spm-click="gostr=/aliyun;locaid=d10drds;"
+                                                                         href="http://drds.console.aliyun.com"><span
+                                class="console-topbar-nav-item-icon icon-ffff"></span> <span class="ng-binding">分布式关系型数据库</span>
+                            <span class="console-topbar-nav-item-short ng-binding">DRDS</span></a></li>
+                        <!-- end ngRepeat: product in category.products --></ul>
+                    <!-- ngIf: $index == 0 --></div>
+                <!-- end ngRepeat: category in col --></div>
+            <!-- end ngRepeat: col in productsInfo -->
+            <div data-ng-repeat="col in productsInfo" class="console-topbar-nav-col ng-scope">
+                <!-- ngRepeat: category in col -->
+                <div ng-repeat="category in col" class="console-topbar-nav-item ng-scope"><p
+                        class="console-topbar-nav-item-title ng-binding">存储与CDN</p>
+                    <ul><!-- ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope"><a ng-href="http://oss.console.aliyun.com/console/index" target="_self"
+                                                aliyun-console-spm="" spm-id="10oss"
+                                                data-spm-click="gostr=/aliyun;locaid=d10oss;"
+                                                href="http://oss.console.aliyun.com/console/index"><span
+                                class="console-topbar-nav-item-icon icon-oss"></span> <span
+                                class="ng-binding">开放存储服务</span> <span class="console-topbar-nav-item-short ng-binding">OSS</span></a>
+                        </li>
+                        <!-- end ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope"><a ng-href="http://cdn.console.aliyun.com/" target="_self"
+                                                aliyun-console-spm="" spm-id="10cdn"
+                                                data-spm-click="gostr=/aliyun;locaid=d10cdn;"
+                                                href="http://cdn.console.aliyun.com/"><span
+                                class="console-topbar-nav-item-icon icon-cdn"></span> <span
+                                class="ng-binding">内容分发网络</span> <span class="console-topbar-nav-item-short ng-binding">CDN</span></a>
+                        </li>
+                        <!-- end ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope console-topbar-unservice"><a
+                                ng-href="http://oas.console.aliyun.com/console/index" target="_self"
+                                aliyun-console-spm="" spm-id="10oas" data-spm-click="gostr=/aliyun;locaid=d10oas;"
+                                href="http://oas.console.aliyun.com/console/index"><span
+                                class="console-topbar-nav-item-icon icon-oas"></span> <span
+                                class="ng-binding">开放归档服务</span> <span class="console-topbar-nav-item-short ng-binding">OAS</span></a>
+                        </li>
+                        <!-- end ngRepeat: product in category.products --></ul>
+                    <!-- ngIf: $index == 0 -->
+                    <div class="console-topbar-nav-gap ng-scope" ng-if="$index == 0"></div>
+                    <!-- end ngIf: $index == 0 --></div>
+                <!-- end ngRepeat: category in col -->
+                <div ng-repeat="category in col" class="console-topbar-nav-item ng-scope"><p
+                        class="console-topbar-nav-item-title ng-binding">大规模计算</p>
+                    <ul><!-- ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope console-topbar-unservice"><a
+                                ng-href="http://odps.console.aliyun.com/console/index" target="_self"
+                                aliyun-console-spm="" spm-id="10odps" data-spm-click="gostr=/aliyun;locaid=d10odps;"
+                                href="http://odps.console.aliyun.com/console/index"><span
+                                class="console-topbar-nav-item-icon icon-odps"></span> <span
+                                class="ng-binding">开放数据处理服务</span> <span
+                                class="console-topbar-nav-item-short ng-binding">ODPS</span></a></li>
+                        <!-- end ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope console-topbar-unservice"><a
+                                ng-href="http://dpc.console.aliyun.com/index.htm" target="_self" aliyun-console-spm=""
+                                spm-id="10dpc" data-spm-click="gostr=/aliyun;locaid=d10dpc;"
+                                href="http://dpc.console.aliyun.com/index.htm"><span
+                                class="console-topbar-nav-item-icon icon-dpc"></span> <span
+                                class="ng-binding">采云间</span> <span
+                                class="console-topbar-nav-item-short ng-binding">DPC</span></a></li>
+                        <!-- end ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope console-topbar-unservice"><a ng-href="http://ads.console.aliyun.com/"
+                                                                         target="_self" aliyun-console-spm=""
+                                                                         spm-id="10ads"
+                                                                         data-spm-click="gostr=/aliyun;locaid=d10ads;"
+                                                                         href="http://ads.console.aliyun.com/"><span
+                                class="console-topbar-nav-item-icon icon-ads"></span> <span
+                                class="ng-binding">分析数据库服务</span> <span
+                                class="console-topbar-nav-item-short ng-binding">ADS</span></a></li>
+                        <!-- end ngRepeat: product in category.products --></ul>
+                    <!-- ngIf: $index == 0 --></div>
+                <!-- end ngRepeat: category in col --></div>
+            <!-- end ngRepeat: col in productsInfo -->
+            <div data-ng-repeat="col in productsInfo" class="console-topbar-nav-col ng-scope">
+                <!-- ngRepeat: category in col -->
+                <div ng-repeat="category in col" class="console-topbar-nav-item ng-scope"><p
+                        class="console-topbar-nav-item-title ng-binding">应用服务</p>
+                    <ul><!-- ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope console-topbar-unservice"><a ng-href="http://ace.console.aliyun.com"
+                                                                         target="_self" aliyun-console-spm=""
+                                                                         spm-id="10ace"
+                                                                         data-spm-click="gostr=/aliyun;locaid=d10ace;"
+                                                                         href="http://ace.console.aliyun.com"><span
+                                class="console-topbar-nav-item-icon icon-ace"></span> <span
+                                class="ng-binding">云引擎</span> <span
+                                class="console-topbar-nav-item-short ng-binding">ACE</span></a></li>
+                        <!-- end ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope console-topbar-unservice"><a ng-href="http://sls.console.aliyun.com"
+                                                                         target="_self" aliyun-console-spm=""
+                                                                         spm-id="10sls"
+                                                                         data-spm-click="gostr=/aliyun;locaid=d10sls;"
+                                                                         href="http://sls.console.aliyun.com"><span
+                                class="console-topbar-nav-item-icon icon-sls"></span> <span
+                                class="ng-binding">简单日志服务</span> <span class="console-topbar-nav-item-short ng-binding">SLS</span></a>
+                        </li>
+                        <!-- end ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope console-topbar-unservice"><a ng-href="http://mqs.console.aliyun.com"
+                                                                         target="_self" aliyun-console-spm=""
+                                                                         spm-id="10mqs"
+                                                                         data-spm-click="gostr=/aliyun;locaid=d10mqs;"
+                                                                         href="http://mqs.console.aliyun.com"><span
+                                class="console-topbar-nav-item-icon icon-mqs"></span> <span
+                                class="ng-binding">消息队列服务</span> <span class="console-topbar-nav-item-short ng-binding">MQS</span></a>
+                        </li>
+                        <!-- end ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope console-topbar-unservice"><a ng-href="http://opensearch.console.aliyun.com"
+                                                                         target="_self" aliyun-console-spm=""
+                                                                         spm-id="10opensearch"
+                                                                         data-spm-click="gostr=/aliyun;locaid=d10opensearch;"
+                                                                         href="http://opensearch.console.aliyun.com"><span
+                                class="console-topbar-nav-item-icon icon-opensearch"></span> <span class="ng-binding">开放搜索服务</span>
+                            <span class="console-topbar-nav-item-short ng-binding"></span></a></li>
+                        <!-- end ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope console-topbar-unservice"><a ng-href="http://pts.aliyun.com/aliyun"
+                                                                         target="_self" aliyun-console-spm=""
+                                                                         spm-id="10pts"
+                                                                         data-spm-click="gostr=/aliyun;locaid=d10pts;"
+                                                                         href="http://pts.aliyun.com/aliyun"><span
+                                class="console-topbar-nav-item-icon icon-pts"></span> <span
+                                class="ng-binding">性能测试服务</span> <span class="console-topbar-nav-item-short ng-binding">PTS</span></a>
+                        </li>
+                        <!-- end ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope console-topbar-unservice"><a ng-href="http://ons.console.aliyun.com"
+                                                                         target="_self" aliyun-console-spm=""
+                                                                         spm-id="10ons"
+                                                                         data-spm-click="gostr=/aliyun;locaid=d10ons;"
+                                                                         href="http://ons.console.aliyun.com"><span
+                                class="console-topbar-nav-item-icon icon-ons"></span> <span
+                                class="ng-binding">开放消息服务</span> <span class="console-topbar-nav-item-short ng-binding">ONS</span></a>
+                        </li>
+                        <!-- end ngRepeat: product in category.products --></ul>
+                    <!-- ngIf: $index == 0 -->
+                    <div class="console-topbar-nav-gap ng-scope" ng-if="$index == 0"></div>
+                    <!-- end ngIf: $index == 0 --></div>
+                <!-- end ngRepeat: category in col -->
+                <div ng-repeat="category in col" class="console-topbar-nav-item ng-scope"><p
+                        class="console-topbar-nav-item-title ng-binding">安全与管理</p>
+                    <ul><!-- ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope"><a ng-href="http://yundun.console.aliyun.com/" target="_self"
+                                                aliyun-console-spm="" spm-id="10yundun"
+                                                data-spm-click="gostr=/aliyun;locaid=d10yundun;"
+                                                href="http://yundun.console.aliyun.com/"><span
+                                class="console-topbar-nav-item-icon icon-yundun"></span> <span
+                                class="ng-binding">云盾</span> <span
+                                class="console-topbar-nav-item-short ng-binding"></span></a></li>
+                        <!-- end ngRepeat: product in category.products -->
+                        <li ng-repeat="product in category.products"
+                            ng-class="{'console-topbar-unservice':productStatus == undefined || productStatus[product.id] == 0}"
+                            class="ng-scope"><a ng-href="http://console.aliyun.com/jiankong/" target="_self"
+                                                aliyun-console-spm="" spm-id="10jiankong"
+                                                data-spm-click="gostr=/aliyun;locaid=d10jiankong;"
+                                                href="http://console.aliyun.com/jiankong/"><span
+                                class="console-topbar-nav-item-icon icon-yunjiankong"></span> <span class="ng-binding">云监控</span>
+                            <span class="console-topbar-nav-item-short ng-binding"></span></a></li>
+                        <!-- end ngRepeat: product in category.products --></ul>
+                    <!-- ngIf: $index == 0 --></div>
+                <!-- end ngRepeat: category in col --></div>
+            <!-- end ngRepeat: col in productsInfo --></div>
+    </div>
+    <div class="pull-left"><!-- ngIf: currentProduct --><a
+            class="console-topbar-btn console-topbar-nav-link console-topbar-btn-inverse ng-scope"
+            href="http://ess.console.aliyun.com" ng-if="currentProduct" aliyun-console-spm="" spm-id="4"
+            data-spm-click="gostr=/aliyun;locaid=d4;"><span class="console-topbar-nav-link-icon icon-ess"></span> <span
+            class="console-topbar-nav-link-text ng-binding">弹性伸缩服务</span> <span class="ng-binding">ESS</span></a><!-- end ngIf: currentProduct -->
+    </div>
+    <div class="console-topbar-info pull-right">
+        <div class="dropdown console-topbar-locale"><a href="#"
+                                                       class="dropdown-toggle console-topbar-btn console-topbar-btn-locale ng-hide"
+                                                       data-toggle="dropdown" aliyun-console-spm="" spm-id="10"
+                                                       ng-show="locale.show" data-spm-click="gostr=/aliyun;locaid=d10;"><span
+                class="console-topbar-btn-text ng-binding">CN<span class="caret"></span></span></a>
+            <ul class="dropdown-menu"><!-- ngRepeat: item in locale.options -->
+                <li ng-repeat="item in locale.options" class="ng-scope"><a href="" ng-click="changeLocale(item)"
+                                                                           aliyun-console-spm="" spm-id="400"
+                                                                           data-spm-click="gostr=/aliyun;locaid=d400;"><span
+                        class="ng-binding">CN</span></a></li>
+                <!-- end ngRepeat: item in locale.options -->
+                <li ng-repeat="item in locale.options" class="ng-scope"><a href="" ng-click="changeLocale(item)"
+                                                                           aliyun-console-spm="" spm-id="401"
+                                                                           data-spm-click="gostr=/aliyun;locaid=d401;"><span
+                        class="ng-binding">EN</span></a></li>
+                <!-- end ngRepeat: item in locale.options --></ul>
+        </div>
+        <!-- ngIf: showGlobalSearch -->
+        <div class="console-search ng-scope" ng-if="showGlobalSearch" aliyun-console-global-search=""
+             search-url="http://www.aliyun.com/s?k=" placeholder-text="全局搜索" spm-id="9">
+            <div class="console-search-ask" ng-class="{'console-search-ask-active':isActive}">
+                <form name="form" role="form" class="ng-pristine ng-valid"><input
+                        class="console-search-ask-input ng-pristine ng-valid" type="text" name="input"
+                        ng-model="askInput" ng-focus="activeInput()" placeholder="全局搜索" ng-blur="inactiveInput()"
+                        autocomplete="off"><a target="_blank" ng-href="http://www.aliyun.com/s?k="
+                                              class="console-search-mark console-search-questionmark"
+                                              aliyun-console-spm="" spm-id="9" data-spm-click="gostr=/aliyun;locaid=d9;"
+                                              href="http://www.aliyun.com/s?k="><span class="icon-search"></span></a>
+                </form>
+            </div>
+        </div>
+        <!-- end ngIf: showGlobalSearch -->
+        <div class="pull-right" style="overflow: hidden"><a ng-href="http://workorder.aliyun.com/addIndex.htm"
+                                                            class="console-topbar-btn console-topbar-btn-inverse console-topbar-btn-workorder"
+                                                            target="_blank" aliyun-console-spm="" spm-id="5"
+                                                            data-spm-click="gostr=/aliyun;locaid=d5;"
+                                                            href="http://workorder.aliyun.com/addIndex.htm"><span
+                class="console-topbar-btn-icon icon-pen-2"></span> <span
+                class="console-topbar-btn-text ng-binding">提交工单</span></a></div>
+        <div class="pull-right"><a ng-href="https://ak-console.aliyun.com/"
+                                   class="console-topbar-btn console-topbar-btn-inverse console-topbar-btn-ak"
+                                   target="_blank" aliyun-console-spm="" spm-id="6"
+                                   data-spm-click="gostr=/aliyun;locaid=d6;" href="https://ak-console.aliyun.com/"><span
+                class="console-topbar-btn-icon icon-key"></span> <span class="console-topbar-btn-text ng-binding">AccessKeys</span></a>
+        </div>
+        <div class="dropdown pull-right console-topbar-user"><a href="#"
+                                                                class="dropdown-toggle console-topbar-btn console-topbar-btn-inverse console-topbar-btn-user"
+                                                                data-toggle="dropdown" aliyun-console-spm="" spm-id="7"
+                                                                data-spm-click="gostr=/aliyun;locaid=d7;"><span
+                class="console-topbar-btn-text ng-binding">abc@qq.com<span class="caret"></span></span></a>
+            <ul class="dropdown-menu"><!-- ngRepeat: userLink in userLinks -->
+                <li ng-repeat="userLink in userLinks" class="ng-scope"><a href="http://i.aliyun.com/" target="_blank"
+                                                                          aliyun-console-spm="" spm-id="200"
+                                                                          data-spm-click="gostr=/aliyun;locaid=d200;"><span
+                        class="ng-binding">用户中心</span></a></li>
+                <!-- end ngRepeat: userLink in userLinks -->
+                <li ng-repeat="userLink in userLinks" class="ng-scope"><a href="http://i.aliyun.com/order"
+                                                                          target="_blank" aliyun-console-spm=""
+                                                                          spm-id="201"
+                                                                          data-spm-click="gostr=/aliyun;locaid=d201;"><span
+                        class="ng-binding">我的订单</span></a></li>
+                <!-- end ngRepeat: userLink in userLinks -->
+                <li ng-repeat="userLink in userLinks" class="ng-scope"><a href="http://i.aliyun.com/amount"
+                                                                          target="_blank" aliyun-console-spm=""
+                                                                          spm-id="202"
+                                                                          data-spm-click="gostr=/aliyun;locaid=d202;"><span
+                        class="ng-binding">账户管理</span></a></li>
+                <!-- end ngRepeat: userLink in userLinks -->
+                <li ng-repeat="userLink in userLinks" class="ng-scope"><a
+                        href="https://account.aliyun.com/logout/logout.htm?oauth_callback=http%3A%2F%2Fess.console.aliyun.com%2F%3Fspm%3D0.0.0.0.Z81CqX%23%2Fess%2FnotOpened"
+                        target="_self" aliyun-console-spm="" spm-id="203"
+                        data-spm-click="gostr=/aliyun;locaid=d203;"><span class="ng-binding">退出</span></a></li>
+                <!-- end ngRepeat: userLink in userLinks --></ul>
+        </div>
+        <!-- ngIf: notification -->
+        <div class="dropdown pull-right console-topbar-notice ng-scope" data-ng-if="notification"><a href="#"
+                                                                                                     class="console-topbar-btn console-topbar-btn-inverse console-topbar-btn-notice dropdown-toggle"
+                                                                                                     data-toggle="dropdown"
+                                                                                                     aliyun-console-spm=""
+                                                                                                     spm-id="8"
+                                                                                                     data-spm-click="gostr=/aliyun;locaid=d8;"><span
+                class="console-topbar-btn-notice-icon icon-bell"></span> <span
+                class="console-topbar-btn-notice-num ng-binding console-topbar-btn-notice-num-zero"
+                ng-class="{'console-topbar-btn-notice-num-zero':notification.unread == 0}">0</span></a>
+
+            <div class="console-topbar-notice-panel">
+                <div class="console-topbar-notice-arrow"></div>
+                <div class="console-topbar-notice-head"><span class="ng-binding">公告</span></div>
+                <div class="console-topbar-notice-body"><!-- ngIf: notification && notification.data.length >0 -->
+                    <!-- ngIf: !notification ||  notification.data.length == 0 --><p
+                            ng-if="!notification ||  notification.data.length == 0"
+                            class="console-topbar-notice-empty ng-scope ng-binding">您暂时没有公告消息</p>
+                    <!-- end ngIf: !notification ||  notification.data.length == 0 --></div>
+                <div class="console-topbar-notice-foot">
+                    <div class="pull-right"><a class="console-topbar-notice-more ng-binding" target="_blank"
+                                               ng-href="http://blog.aliyun.com/category/notice" aliyun-console-spm=""
+                                               spm-id="9" data-spm-click="gostr=/aliyun;locaid=d9;"
+                                               href="http://blog.aliyun.com/category/notice">查看更多</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- end ngIf: notification --></div>
+</div>
+</body>
+</html>

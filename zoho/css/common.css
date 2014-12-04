@@ -1,0 +1,247 @@
+body, input, div, button, .ui-widget, .ui-widget .ui-widget, .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-family: Lucida Grande,Segoe UI,Arial,Helvetica,sans-serif;
+}
+
+.dataDiv .margn-spc {
+    margin-left: 10px;
+}
+
+.flleft {
+    float: left;
+}
+
+.ui-zmenu-item {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    list-style: none;
+    padding: 6px 0 5px;
+    margin: 0px;
+    position: relative;
+    cursor: pointer;
+    font-size: 12px;
+    display: block;
+    white-space: nowrap;
+    float: left;
+    clear: both;
+    min-width: 220px !important;
+    max-width: auto;
+    color: #6D6D6D;
+    transition: background-color 300ms;
+}
+
+.ui-zmenu {
+    padding: 0px;
+    margin: 0px ;
+    position: absolute;
+    z-index: 13000;
+    overflow: hidden;
+}
+
+.ui-zmenu-item .ui-zmenu-icon-layout span:first-child {
+    float: left;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    position: relative;
+}
+
+#leftmenu.ui-widget-content .ui-state-hover,#leftmenu .ui-zmenu-item.ui-state-hover,#rightmenu .ui-zmenu-item.ui-state-hover,#rightmenu.ui-widget-content .ui-state-hover,#addTagMenu.ui-widget-content .ui-state-hover,#addTagMenu .ui-zmenu-item.ui-state-hover,#top_options_menu.ui-widget-content .ui-state-hover,#top_options_menu .ui-zmenu-item.ui-state-hover {
+    padding: 6px 7px 4px 4px;
+    background: #D1D1D1;
+    color: #fff;
+    border-top: 1px solid #e7e7e7;
+    border-left: none;
+    border-right: none;
+}
+
+.ui-zmenu-shortcut {
+    font-size: 10px;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 16px;
+    float: right;
+}
+
+.ui-zmenu-icon-layout {
+    float: left;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    position: relative;
+    margin-left: 10px;
+}
+
+.ui-zmenu-text {
+    margin: 1px 5px 0px 5px;
+}
+
+.ui-zmenu .ui-zmenu-text {
+    margin-left: 10px;
+    float: left;
+    margin-right: 40px;
+}
+
+.ui-zmenu-group .ui-zmenu-text {
+    font-weight: bold;
+    margin: 0px 0px 0px 5px;
+}
+
+.ui-zmenu-no-icon {
+    display: inline;
+    background-image: none !important;
+}
+
+.ui-zmenu-submenu-arrow-cue {
+    position: absolute;
+    right: 10px;
+    width: 11px;
+    height: 16px;
+}
+
+.ui-zmenu-separator {
+    border-bottom: 1px solid #e7e7e7 !important;
+    padding: 0 !important;
+    list-style: none;
+    height: 1px !important;
+}
+
+.ui-zmenu-floating {
+    padding: 5px 5px 5px 0px !important;
+    width: 70px;
+}
+
+.ui-zmenu-floating .ui-zmenu-item {
+    clear: none !important;
+    margin: 0px 0px 0px 5px !important;
+    float: left;
+    width: auto;
+    min-width: 20px;
+}
+
+.ui-zmenu-icononly {
+    padding: 3px 0px 3px 3px;
+    min-width: 0px;
+}
+
+.ui-zmenu-icononly .ui-zmenu-item {
+    float: left;
+    padding: 0px;
+    margin: 0px 3px 3px 0px;
+    clear: both;
+}
+
+.ui-zmenu-icononly .ui-zmenu-icon-layout {
+    margin: 0px;
+}
+
+.ui-zmenu-icononly .ui-zmenu-text, .ui-zmenu-icononly .ui-zmenu-shortcut {
+    display: none;
+}
+
+.ui-zmenu-textonly .ui-zmenu-separator {
+    margin-left: 5px;
+}
+
+.ui-zmenu-textonly {
+    min-width: 150px !important;
+}
+
+.ui-zmenu-textonly .ui-zmenu-icon-layout, .ui-zmenu-textonly .ui-zmenu-shortcut {
+    display: none !important;
+}
+
+.ui-zmenu .ui-zmenu-group .ui-zmenu-submenu-arrow-cue {
+    display: none;
+}
+
+.ui-zmenu-scroll-top, .ui-zmenu-scroll-bottom {
+    position: absolute;
+    background-color: #DDECF9;
+    width: 100%;
+    height: 15px;
+    z-index: 13050;
+    text-align: center;
+}
+
+.ui-zmenu-scroll-top {
+    top: 0px;
+}
+
+.ui-zmenu-scroll-bottom {
+    margin-top: -10px;
+}
+
+.ui-zmenu-floating .ui-zmenu-group {
+    width: 100%;
+    border-bottom: 1px solid;
+    padding: 5px;
+}
+
+.ui-zmenu-group .ui-zmenu-text {
+    display: inline-block;
+}
+
+.ui-zmenu-group .ui-zmenu-group-item .ui-zmenu-no-icon {
+    display: none;
+}
+
+.ui-zmenu-group .ui-zmenu-icon-layout {
+    display: none;
+}
+
+.ui-zmenu-icontext-floating {
+    padding: 10px 5px 0 0 !important;
+    width: 205px;
+}
+
+.ui-zmenu-icontext-floating .ui-zmenu-item {
+    clear: none;
+    float: left;
+    margin: 0 0 10px 15px !important;
+    padding: 3px;
+    border: 1px solid;
+    width: 75px;
+}
+
+.ui-zmenu-icontext-floating .ui-zmenu-item-hover {
+    border: 1px solid;
+}
+
+.ui-zmenu-icontext-floating .ui-zmenu-icon-layout {
+    display: block;
+    float: left;
+    height: 52px;
+    width: 75px;
+    margin-bottom: 3px;
+}
+
+.ui-zmenu-icontext-floating .ui-zmenu-shortcut {
+    display: none;
+}
+
+.ui-zmenu-icontext-floating .ui-zmenu-text {
+    display: block;
+    text-align: center;
+    margin-left: 5px;
+    width: 60px;
+    overflow: hidden;
+}
+
+.ui-zmenu-icontext-floating .ui-zmenu-separator {
+    border: none;
+    border-bottom: solid 1px!important;
+    width: 100%;
+    margin: 0 0 10px 5px !important;
+    padding: 0px;
+}
+
+.ui-zmenu-lastitem {
+    border-bottom: none;
+}
+
+.ui-zmenu-item .ui-zmenu-text {
+    margin: 2px 5px 1px 10px;
+    line-height: 100%;
+}
